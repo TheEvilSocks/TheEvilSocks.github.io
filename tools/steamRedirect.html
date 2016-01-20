@@ -1,5 +1,8 @@
 <script type="text/javascript">
 window.location = "steam://connect/" + document.location.href.substring(document.location.href.indexOf("#")+1);
+setTimeout(function(){
 window.close();
 window.open('','_self').close();
+  
+},1000);
 </script>
