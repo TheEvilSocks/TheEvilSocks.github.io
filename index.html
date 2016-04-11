@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>TheEvilSocks - Home Page</title>
+
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="idk.css"/>
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+
+	<div id="starHeader"></div>
+
+	<div id="header">
+		<a href="index.html"><img id="logo" src="img/logo.png" style="display: block; margin-left: auto; margin-right: auto;"/></a>
+		<div id="menuBtn" aria-label="Toggle Navigation" class="lines-button minus">
+			<span class="lines"></span>
+		</div>
+
+		<!--
+  	<div id="iconBar">
+  		<a href="https://github.com/TheEvilSocks" target="_BLANK"><img class="headerIcon" src="img/github.png" /></a>
+  	</div>-->
+
+  	
+  </div>
+  <div id="content">
+  	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui sapien, molestie at pellentesque sed, convallis sit amet justo. Proin egestas, nulla sit amet volutpat congue, augue sapien blandit ex, sed tempus purus nunc ut eros. Praesent cursus dui sed scelerisque vulputate. Morbi interdum, libero eleifend convallis viverra, sem augue dignissim augue, sed molestie justo lectus condimentum velit. Donec elementum nisi sit amet turpis accumsan, non sodales velit scelerisque. Integer placerat tellus nec laoreet elementum. Praesent volutpat eget tellus at pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec sollicitudin odio et nulla vestibulum ullamcorper. Vivamus malesuada turpis elit, in eleifend diam sodales at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut vel elit risus. Etiam non augue enim. In feugiat lectus sed ex vestibulum, at ultricies arcu molestie.
+  	<br><br>
+  	Aliquam sit amet risus ut nisl pulvinar bibendum. Donec cursus tempor tortor, et vehicula nisi. Donec pretium, justo at blandit posuere, leo purus porttitor nibh, sit amet aliquam nibh nisl pulvinar arcu. Cras fermentum arcu mollis bibendum mattis. Vivamus mollis rutrum elit, eget tempor lacus consequat in. Aliquam erat volutpat. Curabitur mauris tellus, lobortis in augue a, luctus lacinia lectus. Maecenas tristique auctor neque sed eleifend. Vivamus consectetur metus eu ex porta, quis faucibus nunc viverra.
+  	<br><br>
+  	Cras vitae ex at turpis suscipit tristique non a orci. Praesent malesuada sit amet mi sit amet varius. Donec dolor justo, sagittis eget mi vitae, lacinia sollicitudin orci. In finibus quam quis luctus varius. Ut eu massa dui. Suspendisse tortor purus, porta id lacus eu, porta blandit turpis. Etiam malesuada lorem neque, ac bibendum leo tincidunt et. Donec accumsan quam vitae ex mollis congue. In ultrices condimentum enim nec feugiat. Duis tincidunt risus a facilisis vulputate. Suspendisse consequat porttitor justo, cursus ultricies massa.
+  	<br><br>
+  	Sed cursus interdum sapien ut blandit. Vestibulum aliquam laoreet lectus at iaculis. Duis tempor dapibus lacus, vitae fermentum leo volutpat sit amet. Donec arcu lorem, faucibus non luctus ut, pulvinar pellentesque tellus. Vestibulum fermentum libero ac quam rutrum, at rhoncus libero posuere. Vivamus euismod congue augue eu varius. Cras et pulvinar nisl. Vivamus sit amet commodo est. Sed faucibus nisi quis turpis facilisis rhoncus. Phasellus commodo vulputate mattis. Vestibulum tincidunt ullamcorper nibh et commodo. Nulla tristique mattis venenatis. Praesent eget rutrum metus, ut scelerisque sem. Duis scelerisque quam sit amet arcu tempor elementum. Etiam a leo elit.
+  	<br><br>
+  	Cras a faucibus est, ac interdum tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce tincidunt in diam sed gravida. Fusce vehicula condimentum neque tristique pharetra. Sed convallis magna vitae lorem condimentum rhoncus. Vestibulum vitae posuere eros, sit amet convallis nibh. Etiam egestas dapibus dui, sit amet lobortis neque placerat nec. Vestibulum placerat ante justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin posuere bibendum commodo. Duis massa enim, eleifend in magna sed, imperdiet sodales tortor. Proin elit nulla, consectetur eget interdum et, molestie ac urna.
+  </div>
+
+
+
+  <script type="text/javascript">
+  var flickerTime = 1000;
+
+
+
+  for (var i = 0; i < Math.floor($(document).width() * $(document).height() / 8000); i++) {
+  	console.log("New Star!");
+  	var currentStarClass = ["star1", "star2", "star3"][Math.floor((Math.random() * 3))];
+  	$newdiv = $('<div/>').toggleClass(currentStarClass);
+  	var posx = Math.floor((Math.random() * ($(document).width() - 6)).toFixed()/6)*6;
+  	var posy = Math.floor((Math.random() * ($(document).height() - 6)).toFixed()/6)*6;
+  	$newdiv.css({
+  		'position':'absolute',
+  		'width': '6px',
+  		'height': '6px',
+  		'transition': 'background-color ' + ((flickerTime-(Math.floor(Math.random() * (flickerTime/5))))/1000) + 's ease',
+
+  		'left':posx+'px',
+  		'top':posy+'px'
+  	}).appendTo( 'body' );
+  };
+
+  function flickerStar(){
+  	$(".star1").toggleClass("starLit");
+  	$(".star2").toggleClass("starLit");
+  	$(".star3").toggleClass("starDark");
+
+
+  	console.log("Flicker!");
+  	setTimeout(function(){flickerStar()}, flickerTime);
+  }
+  flickerStar();
+
+
+
+
+  var anchor = document.querySelectorAll('#menuBtn');
+
+  [].forEach.call(anchor, function(anchor){
+  	var open = false;
+  	anchor.onclick = function(event){
+  		event.preventDefault();
+  		if(!open){
+  			this.classList.add('close');
+  			open = true;
+  		}
+  		else{
+  			this.classList.remove('close');
+  			open = false;
+  		}
+  	}
+  }); 
+  </script>
+
+
+</body>
+</html>
