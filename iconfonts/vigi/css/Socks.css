@@ -20,6 +20,8 @@
   letter-spacing: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align:middle;
+  padding-right:6px;
 }
 .icon-discord:before{content:'\0041';}
